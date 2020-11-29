@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get Date</title>
+</head>
+<body>
+<script>
+    // tao lop date
+    function MyDate(day,month,year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getDay = function (){
+            return this.day;
+        }
+        this.getMonth = function (){
+            return this.month;
+        }
+        this.getYear = function (){
+            return this.year;
+        }
+        this.setDay = function (day){
+            this.day = day;
+        }
+        this.setMonth = function (month){
+            this.month = month;
+        }
+        this.setYear = function (year){
+            this.year = year;
+        }
+    }
+
+    //tao obj
+    let date = new MyDate(27,11,2020);
+    document.write(date.getDay() + " " + date.getMonth() + " " + date.getYear() + "<br>");
+    date.setDay(28);
+    date.setMonth(12);
+    date.setYear(2021);
+    document.write(date.day + "/" + date.month + "/" + date.year);
+
+</script>
+</body>
+</html>
